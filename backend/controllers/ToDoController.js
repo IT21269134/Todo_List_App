@@ -6,7 +6,7 @@ module.exports.getToDo = async (req, res) => {
 };
 
 module.exports.createToDo = async (req, res) => {
-	const { title, description } = req.body;
+	const { title, description} = req.body;
 	ToDoModel.create({ title, description }).then((data) => {
 		console.log("Added successfully");
 		console.log(data);
