@@ -8,8 +8,8 @@ h1 {
 	margin-top: 1rem;
 	text-align: center;
 	font-size: 80px;
+	// outline-color: orange;
 }
-
 .top {
 	margin-top: 3rem;
 	margin-bottom: 2rem;
@@ -24,7 +24,7 @@ input {
 	outline: none;
 	width: 500px;
 	padding: 0.5rem;
-	border-bottom: 1px solid #000;
+	border-bottom: 2px solid #000;
 }
 
 .add {
@@ -33,6 +33,7 @@ input {
 	padding: 0.8rem 2rem;
 	border-radius: 10px;
 	cursor: pointer;
+	font-size: 20px;
 }
 
 .add:hover {
@@ -48,6 +49,7 @@ input {
 	color: #000;
 	padding: 1.5rem 3rem;
 	border-radius: 15px;
+	font-size: 18px;
 }
 .todo:hover {
     background-color: #000;
@@ -64,16 +66,15 @@ input {
 	gap: 0.5rem;
 }
 
-.icon {
+.icon1, .icon2{
 	cursor: pointer;
-	font-size: 20px;
+	font-size: 25px;
+}
+.icon1:hover {
+	color: greenyellow;
 }
 
-.checkbox {
-	position: absolute;
-	top: 50%;
-	right: 375px;
-	transform: translateY(-50%);
-	display: flex;
-	gap: 0.5rem;
+.icon2:hover {
+	color: red;
 }
+

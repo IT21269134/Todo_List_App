@@ -11,8 +11,8 @@ function Todo({ title, description, updateMode, deleteToDo }) {
 				<div className="text">{description} </div>
 
 				<div className="icons">
-					<BiEdit className="icon" onClick={updateMode} />
-					<AiFillDelete className="icon" onClick={deleteToDo} />
+					<BiEdit className="icon1" onClick={updateMode} />
+					<AiFillDelete className="icon2" onClick={deleteToDo} />
 				</div>
 			</div>
 		</div>
