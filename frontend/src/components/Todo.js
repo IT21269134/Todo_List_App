@@ -3,7 +3,7 @@ import { BiEdit } from "react-icons/bi";
 import { AiFillDelete } from "react-icons/ai";
 import "../styling/mainPage.scss";
 
-function Todo({ title, description, updateToDo, deleteTodo }) {
+function Todo({ title, description, updateMode, deleteToDo }) {
 	return (
 		<div>
 			<div className="todo">
@@ -11,8 +11,8 @@ function Todo({ title, description, updateToDo, deleteTodo }) {
 				<div className="text">{description} </div>
 
 				<div className="icons">
-					<BiEdit className="icon" onClick={updateToDo} />
-					<AiFillDelete className="icon" onClick={deleteTodo} />
+					<BiEdit className="icon" onClick={updateMode} />
+					<AiFillDelete className="icon" onClick={deleteToDo} />
 				</div>
 			</div>
 		</div>

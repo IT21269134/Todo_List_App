@@ -1,7 +1,12 @@
 import React, { useEffect, useState } from "react";
 import "../styling/mainPage.scss";
 import ToDo from "./Todo";
-import { addToDo, getAllToDo, updateToDo,deleteToDo } from "../utilities/handleApi";
+import {
+	addToDo,
+	getAllToDo,
+	updateToDo,
+	deleteToDo,
+} from "../utilities/handleApi";
 
 function MainPage() {
 	const [toDo, setToDo] = useState([]);
@@ -19,9 +24,7 @@ function MainPage() {
 		setTitle(title);
 		setDescription(description);
 		setToDoId(_id);
-		
-		
-	}
+	};
 
 	return (
 		<div className="App">
@@ -44,7 +47,16 @@ function MainPage() {
 						className="add"
 						onClick={
 							isUpdating
-								? () => updateToDo(toDoId, title, description,setToDoId,setTitle,setDescription,setIsUpdating)
+								? () =>
+										updateToDo(
+											toDoId,
+											title,
+											description,
+											setToDo,
+											setTitle,
+											setDescription,
+											setIsUpdating
+										)
 								: () =>
 										addToDo(
 											title,
@@ -64,8 +76,11 @@ function MainPage() {
 							key={item._id}
 							title={item.title}
 							description={item.description}
-							updateMode={()=> updateMode(item._id, item.title, item.description)}
-							deleteTodo={() => deleteToDo(item._id, setToDo)}					/>
+							updateMode={() =>
+								updateMode(item._id, item.title, item.description)
+							}
+							deleteToDo={() => deleteToDo(item._id, setToDo)}
+						/>
 					))}
 				</div>
 			</div>

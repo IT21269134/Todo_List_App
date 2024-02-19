@@ -33,7 +33,7 @@ const updateToDo = (
 	setIsUpdating
 ) => {
 	axios
-		.post(`${baseUrl}/save`, { _id: toDoId, title, description })
+		.post(`${baseUrl}/update`, { _id: toDoId, title, description })
 		.then((data) => {
 			setTitle("");
 			setDescription("");
@@ -49,6 +49,7 @@ const deleteToDo = (_id, setToDo) => {
 	axios
 		.post(`${baseUrl}/delete`, { _id})
 		.then((data) => {
+			console.log(data);
 			getAllToDo(setToDo);
 		})
 		.catch((err) => {
