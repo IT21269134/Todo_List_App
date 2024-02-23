@@ -16,12 +16,13 @@ const addToDo = (title, setTitle, description, setDescription, setToDo) => {
 			console.log(data);
 			setTitle("");
 			setDescription("");
-			getAllToDo(setToDo);
+			setToDo(prevToDo => [data, ...prevToDo]);
 		})
 		.catch((err) => {
 			console.log(err);
 		});
 };
+
 
 const updateToDo = (
 	toDoId,

@@ -19,4 +19,5 @@ function Todo({ title, description, updateMode, deleteToDo }) {
 	);
 }
 
+
 export default Todo;
